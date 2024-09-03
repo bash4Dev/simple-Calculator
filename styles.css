@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "SUSE", sans-serif;
+    background-color: gray;
+}
+
+body main {
+    width: 350px;
+    height: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+main #input-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#input-div #user-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: #cac8c8;
+}
+
+#input-div .result {
+    position: absolute;
+    right: 15px;
+    color: #4b4848;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+main .calculator-btns {
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.calculator-btns .btn, .clear-btn, .equal-btn {
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: gray;
+}
+
+.calculator-btns .btn.symbol, .equal-btn {
+    font-weight: 900;
+    background-color: #4b4848;
+}
+
+.calculator-btns .clear-btn {
+    background-color: #fa6666;
+}
