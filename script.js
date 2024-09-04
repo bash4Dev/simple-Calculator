@@ -1,30 +1,40 @@
 const userInput = document.getElementById('user-input');
 const displayResult = document.getElementById('display-result');
 const buttons = document.querySelectorAll(".btn");
+const equalBtn = document.getElementById('equal-btn');
+
+let currentInput = '';
 
 const calcFunction = () => {
     buttons.forEach(btn => {
         btn.addEventListener("click", () => {
-            userInput.value += btn.innerText;
+            if (btn.classList.contains('number') || btn.classList.contains('symbol')) {
+                userInput.value += btn.innerText;
+            } else if (btn.classList.contains('clear')) {
+                userInput.value = '';
+                displayResult.innerText = '';
+            } else if (btn.classList.contains('delete')) {
+                currentInput = userInput.value.slice(0, -1);
+                userInput.value = currentInput;
+            }
         });
     });
 }
 
 const evalFunction = () => {
-    let currentInput = '';
-    // const evalUserInput = (userInput) => {
-    //     return eval(userInput);
-    // }
-    document.getElementById('equal-btn').addEventListener('click', () => {
-        currentInput = userInput.value;
-        displayResult.innerText = eval(currentInput);
+    equalBtn.addEventListener('click', () => {
+        try {
+            currentInput = userInput.value;
+            displayResult.innerText = eval(currentInput);
+        } catch {
+            alert('Error');
+        }
     });
 }
+
+const delBtn = document.querySelector('.delete');
+const transformBtn = delBtn.textContent.toUpperCase();
+delBtn.innerText = transformBtn;
+
 calcFunction();
 evalFunction();
-
-// const clearFunction = () => {
-//     displayResult.innerText = '';
-// }
-
-// document.getElementById('click', clearFunction)
