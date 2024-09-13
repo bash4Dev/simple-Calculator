@@ -25,7 +25,9 @@ const evalFunction = () => {
     equalBtn.addEventListener('click', () => {
         try {
             currentInput = userInput.value;
-            displayResult.innerText = eval(currentInput);
+            currentInput
+                ? displayResult.innerText = eval(currentInput)
+                : '';
         } catch {
             alert('Error');
         }
