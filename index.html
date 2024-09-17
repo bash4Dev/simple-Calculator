@@ -7,34 +7,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
     <title>Calculator App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <main>
-        <div id="input-div">
-            <input type="text" id="user-input" placeholder="0" disabled>
-            <span class="result" id="display-result"></span>
-        </div>
-        <div class="delete btn">Del</div>
-        <div class="calculator-btns">
-            <div class="number btn" id="7-btn">7</div>
-            <div class="number btn" id="8-btn">8</div>
-            <div class="number btn" id="9-btn">9</div>
-            <div class="symbol btn" id="plus-btn">+</div>
-            <div class="number btn" id="4-btn">4</div>
-            <div class="number btn" id="5-btn">5</div>
-            <div class="number btn" id="6-btn">6</div>
-            <div class="symbol btn" id="minus-btn">-</div>
-            <div class="number btn" id="1-btn">1</div>
-            <div class="number btn" id="2-btn">2</div>
-            <div class="number btn" id="3-btn">3</div>
-            <div class="symbol btn" id="times-btn">*</div>
-            <div class="clear btn" id="clear-btn">C</div>
-            <div class="number btn" id="0-btn">0</div>
-            <div class="equal-btn btn" id="equal-btn">=</div>
-            <div class="symbol btn" id="division-btn">/</div>
-        </div>
-    </main>
+    <div class="container-fluid">
+        <h1 class="text-center text-white"><i class="fas fa-calculator"></i> Calculator App</h1>
+        <main class="calculator">
+            <div id="input-div">
+                <input type="text" id="user-input" placeholder="0" disabled>
+                <span class="result" id="display-result"></span>
+            </div>
+            <div class="delete btn btn-warning ">Del</div>
+            <div class="calculator-btns">
+                <div class="number btn btn-default btn-block" id="7-btn">7</div>
+                <div class="number btn btn-default btn-block" id="8-btn">8</div>
+                <div class="number btn btn-default btn-block" id="9-btn">9</div>
+                <div class="symbol btn btn-default btn-block" id="plus-btn">+</div>
+                <div class="number btn btn-default btn-block" id="4-btn">4</div>
+                <div class="number btn btn-default btn-block" id="5-btn">5</div>
+                <div class="number btn btn-default btn-block" id="6-btn">6</div>
+                <div class="symbol btn btn-default btn-block" id="minus-btn">-</div>
+                <div class="number btn btn-default btn-block" id="1-btn">1</div>
+                <div class="number btn btn-default btn-block" id="2-btn">2</div>
+                <div class="number btn btn-default btn-block" id="3-btn">3</div>
+                <div class="symbol btn btn-default btn-block" id="times-btn">*</div>
+                <div class="clear btn btn-danger btn-block" id="clear-btn">C</div>
+                <div class="number btn btn-default btn-block" id="0-btn">0</div>
+                <div class="equal-btn btn btn-default btn-block" id="equal-btn">=</div>
+                <div class="symbol btn btn-default btn-block" id="division-btn">/</div>
+            </div>
+        </main>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
