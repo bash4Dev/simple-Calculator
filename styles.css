@@ -10,7 +10,7 @@ body {
     display: grid;
     place-items: center;
     font-family: "SUSE", sans-serif;
-    background-color: #4e6d6b;
+    background-color: #5a817f;
 }
 
 body main {
@@ -47,7 +47,6 @@ main #input-div {
 main .calculator-btns {
     width: 100%;
     display: grid;
-    place-items: center;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.9rem;
 }
@@ -55,14 +54,13 @@ main .calculator-btns {
 main .btn {
     color: #fff;
     padding: 20px;
-    text-align: center;
     cursor: pointer;
     font-weight: 600;
     font-size: 18px;
     border-radius: 4px;
 }
 
-.calculator-btns .btn, .clear-btn, .equal-btn {
+.calculator-btns .number {
     width: 100%;
     background-color: gray;
 }
@@ -73,13 +71,8 @@ main .delete.btn {
     width: 84px;
     padding: 10px;
     margin: 10px 0;
-    background-color: #978a6c;
 }
 
 .calculator-btns .btn.symbol, #equal-btn {
     background-color: #4b4848;
-}
-
-.calculator-btns .clear.btn {
-    background-color: #fa6666;
 }
